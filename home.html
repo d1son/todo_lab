@@ -27,15 +27,22 @@
 	<div class="row">
 
 		<aside class="col-md-4">
-			<form>
-				<input type="text" id="input" placeholder="Enter your To-Do list item here!">
-				<input type="submit"></input>
+			<form class="form-inline">
+				<div class="form-group">
+					<input type="text" class="form-control" id="input" placeholder="Enter your To-Do list item here!">
+					<input type="submit" class="btn btn-primary" id="submit"></input>
+				</div>	
 			</form>
 		</aside>
 
-		<div class="row">
-			skdfalskdfmlaksm
-		</div>
+		<div class="col-md-8">
+			<table class="table table-hover table-bordered table-striped">
+				<thead>
+					<th colspan="2">To-Do List!</th>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>	
 	</div>
 </div>
 
@@ -52,8 +59,9 @@
 
 
 
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/submit.js"></script>
+
 </body>
 </html>

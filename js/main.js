@@ -1,4 +1,9 @@
-// This will make the input field as long as the placeholder, for all input fields
+$(document).ready(function() {
+	$("input[placeholder]").each(function () {
+        $(this).attr('size', $(this).attr('placeholder').length);
+    });
 
-input.setAttribute("size",input.getAttribute("placeholder").length);
+});
+
+
 
