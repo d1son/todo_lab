@@ -26,19 +26,22 @@
 <div class="container">
 	<div class="row">
 
-		<aside class="col-md-4">
+		<div class="col-md-4">
 			<form class="form-inline">
 				<div class="form-group">
-					<input type="text" class="form-control" id="input" placeholder="Enter your To-Do list item here!">
+					<input type="text" class="form-control" id="input" placeholder="Enter your To-Do list item here!" autocomplete="off">
 					<input type="submit" class="btn btn-primary" id="submit"></input>
+					<input type="checkbox" class="checkBox"></input>
+				<div class="alert alert-danger" role="alert">"You've already added this item!"</div>
 				</div>	
 			</form>
-		</aside>
-
+		</div>
 		<div class="col-md-8">
 			<table class="table table-hover table-bordered table-striped">
 				<thead>
-					<th colspan="2">To-Do List!</th>
+					<tr>
+						<th colspan="2">To-Do List!</th>
+					</tr>	
 				</thead>
 				<tbody></tbody>
 			</table>
