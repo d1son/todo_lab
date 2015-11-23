@@ -24,7 +24,7 @@ $(document).ready(function() {
 		var inputTd = $("<td>").addClass("word-td").append(toDo1);
 		var deleteBtn = $("<button>").append("Delete").addClass("btn btn-danger");
 		var deleteTd = $("<td>").append(deleteBtn);
-		var checkBox = $("<input type='checkbox' id='strikeBox'>");
+		var checkBox = $("<input type='checkbox' id='strikeBox'>").attr("id", "strikeBox").attr("data-state", "not");
 
     deleteTd.append(checkBox);
 		
@@ -34,13 +34,32 @@ $(document).ready(function() {
 		$("tbody").append(newRow);
 
 
+		// $(document).on("click", ".checkboxes", function(){
+  //   var dataState = $(this).attr("data-state");
+  //   if(dataState === "not-checked"){
+  //   $(this).parent().attr("class", "str");
+  //   $(this).attr("data-state", "checked");
+  //   }
+  //   else{
+  //   $(this).parent().removeClass();
+  //   $(this).attr("data-state", "not-checked");
+  //   }
+
+		$(document).on("click", "#strikeBox", function() {
+		var dataState = $(this).attr("data-state");
+			if(dataState === "not-checked") {
+				$(this).parent().attr("class", "checkBox");
+				$(this).attr("data-state", "checked");
+			} else {
+				$(this).parent().removeClass();
+	  		$(this).attr("data-state", "not-checked");
+			}
+		});
+
+
 		$(input).val("").focus();
 	});
 
-	$("input type").on("click", function() {
-			alert("hey")
-			// $("table").addClass("checkBox")
-		});
 
 
 	$("table").on("click", ".btn-danger", function() {
