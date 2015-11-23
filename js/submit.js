@@ -1,3 +1,5 @@
+//start js
+
 $(document).ready(function() {
 	$(".alert-danger").hide();
 	$("#submit").on("click", function(e){
@@ -11,6 +13,8 @@ $(document).ready(function() {
 			}
 		});
 
+//to prevent duplicate to do items
+
 		if(isDuplicate) {
 			$(".alert-danger").show();
 			return;
@@ -18,20 +22,26 @@ $(document).ready(function() {
 
 		var newRow = $("<tr>");
 		var inputTd = $("<td>").addClass("word-td").append(toDo1);
-		var deleteBtn = $("<button>").append("Delete");
+		var deleteBtn = $("<button>").append("Delete").addClass("btn btn-danger");
 		var deleteTd = $("<td>").append(deleteBtn);
+		var checkBox = $("<input type='checkbox' id='strikeBox'>");
 
+    deleteTd.append(checkBox);
+		
 		newRow.append(inputTd);
 		newRow.append(deleteTd);
 
 		$("tbody").append(newRow);
 
-		$(deleteBtn).addClass("btn btn-danger")
+
 		$(input).val("").focus();
 	});
 
-	$("checkbox")
-	var checkBox = $("<checkbox>")
+	$("input type").on("click", function() {
+			alert("hey")
+			// $("table").addClass("checkBox")
+		});
+
 
 	$("table").on("click", ".btn-danger", function() {
 			$(this).parent().parent().remove()

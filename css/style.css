@@ -6,3 +6,11 @@
 .panel-body {
 	text-align: center;
 }
+
+#strikeBox {
+	margin-left: 50px;
+}
+
+.checkBox {
+	text-decoration: line-through;
+}
